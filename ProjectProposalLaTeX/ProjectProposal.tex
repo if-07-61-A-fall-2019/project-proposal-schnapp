@@ -9,6 +9,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage[table]{xcolor}
 \usepackage{hyperref}
+\
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 \theoremstyle{definition}
@@ -20,9 +21,9 @@
    \color{blue}
 }{}
 
-\newcommand{\projectname}{Template}
+\newcommand{\projectname}{Schnapp 5}
 \newcommand{\productname}{School Health Service Assistant}
-\newcommand{\projectleader}{P. Bauer}
+\newcommand{\projectleader}{P. Litzlfellner}
 \newcommand{\documentstatus}{In process}
 %\newcommand{\documentstatus}{Submitted}
 %\newcommand{\documentstatus}{Released}
@@ -56,7 +57,7 @@ Version & \version \\ \hline
 \begin{tabular}{|l|l|l|}
 \hline
 \cellcolor[gray]{0.5}\textcolor{white}{Date} & \cellcolor[gray]{0.5}\textcolor{white}{Author} & \cellcolor[gray]{0.5}\textcolor{white}{Change} \\ \hline
-November 03, 2011&P. Bauer/T. Stütz&First version \\ \hline
+September 27, 2019&Patrick Litzlfellner &First version \\ \hline
 \end{tabular}
 \pagebreak
 
@@ -64,12 +65,14 @@ November 03, 2011&P. Bauer/T. Stütz&First version \\ \hline
 \pagebreak
 
 \section{Introduction}
-\begin{explanation}
-The management bases the decision to approve a project within the scope of a Project Progress Decision of the Decision Gate Project Approved on the project proposal, which is not prepared within the framework of the V-Model. Based on a project or system idea, the acquirer systematically describes the necessity of a project based on feasibility, affordability, market, and economic efficiency criteria.
-The project proposal processes subjects like the initial situation, existing framework conditions, project objectives and system concepts, chances and risks, and the economic efficiency.
 
-All written text in this color is explanatory and has to be deleted when the document is released. The example given here is only a skeleton. Your text has to be more elaborate and explanatory.
-\end{explanation}
+
+
+Schnapp ist ein Programm, das Kindern in der Unterstufe und in der Vorschule über bestimmte Deutschkompetenzen, wie zum Beispiel Buchstaben erkennen, wiedergeben oder das zuordnen von Zahlen, mit spielerischen Fragen getestet wird.
+Diese Tests werden jedes Jahr am Schulanfang in den Volksschulen an die 1. Klässler geprüft.
+Diese Daten werden alle in einer Datenbank gesammelt. 
+
+
 \pagebreak
 
 \section{Initial Situation}
@@ -87,13 +90,17 @@ The basic question could be summarized in German as follows:
 \end{itemize}
 \end{explanation}
 
-\begin{example}
-A doctor in a (primary) school examines the primary school students periodically. (S)he must report the results of this examinations and inform parents about medical defects. Sometimes the doctor has to refer students in problematic health condition to specialists.
 
-The creation of the paperwork is time-consuming since the health data collected during the examinations has to be edited several times (once for the reports, once for the parents information, once for referral, etc. The information retrieval concerning the medical history of students is also time-consuming. The time spent on this work would be better used on direct contact time with students.
 
-The documentation of the examinations can be automated. So the reports and further documents will be generated. The medical history will be persisted automatically.
-\end{example}
+Dieses Programm wird mit einem Prüfer und Kindern im Volkschulalter verwendet. Die Kinder gehen in ihrem eigenen Tempo durch die Aufgaben und erhalten Hilfe durch den Prüfer. Es gibt auch Aufgaben, die nur mit dem Prüfer erledigt werden können. Die Tests können mehrmals wiederholt werden und die Kinder bekommen die Zeit, die sie brauchen um die Tests abzuschließen. Wenn alle Aufgaben abgeschlossen wurden, werden die Ergebnisse auf einen Server hochgeladen. Auf dem Server werden dann die Ergebnisse aller Kinder miteinander verglichen.
+Das Ergebnis dieses Tests soll sein, dass die Lehrer es einfacher haben die einzelnen Kinder zu fördern, in den Bereichen in denen sie noch Schwierigkeiten haben.
+Aktuell haben wir 11 Aufgaben mit passenden Audios und Bildern zu jeder Übung.
+Wir möchten das Programm noch weiter verbessern, sodass es den Kindern besser helfen kann.
+Wir wollen eine bessere Förderung der Kinder durch die Lehrkräfte erreichen und ihnen so eine bessere Zukunft ermöglichen.
+Die Tests werden an jeder Klasse der Volksschule durchgeführt. So sieht man jedes Jahr, wie weit jedes Kind ist und wo es eventuell noch Förderungen benötigt.
+Das Programm wird auf eine iPad ausgeführt oder am PC. Man benötigt Erfahrung mit dem Umgang eines iPad und man sollte den Umgang mit Maus und Tastatur beherrschen.
+Die Ergebnisse werden mit durchschnitts Ergebnisse angezeigt in Form eines Linie Diagramm.
+
 
 \pagebreak
 
@@ -114,6 +121,15 @@ The proposed system has to the deal with the following constraints:
 \end{itemize}
 \end{example}
 
+\begin{description}
+	Alle Daten werden in einer Datenbank gespeichert und ausgewertet.
+	Die GUI muss benutzerfreundlich und für Kinder leicht verständlich sein.
+	Es soll eine kleine Geschichte geben, damit Kinder keine langeweile bei der Testung haben.
+	Da Kinder das Programm verwenden werden, muss das Programm auf deutsch sein. 
+	Da wir das Projekt einer 5. Klasse fortsetzen werden und wir erst weitere Aufgaben in ein paar wochen bekommen, müssen wir uns erst um das vorherige Programm Schnapp 4 informieren.
+
+\end{description}
+
 \pagebreak
 
 \section{Project Objectives and System Concepts}
@@ -131,6 +147,88 @@ The project objectives can be summarized as follows:
 \item Report is a one-click-job at the end of the day
 \end{itemize}
 \end{example}
+
+
+
+Die Anforderungen an einer aussagekräftigen und gleichzeitig für die schulische Praxis geeignete Lernverlaufsdiagnostik sind hoch. Die Tests sind kurz und geben einen Einblick in den Fortschritts des jeweiligen Schülers.
+Eines der größten Hindernisse wird die konstruktion von Paralleltest die die vergangene Kompetenz nochmals abfrägt. Desweiteren wäre eine internetbasierte Realisierung von Vorteil.
+Anforderungen:
+Jeder Nutzer (Kind) soll einen eigenen Zugang bekommen.
+Jeder Lehrer soll einen eigenen Zugang erhalten und so die Kinder kontrollieren können.
+Weicht ein Schüler vom Mittelwert ab wird dieser farblich markiert sowohl positiv als auch negativ.
+\subsection{Mathe erste Klasse}
+Kompetenz basale Vorläuferfähigkeiten (20 Aufgaben):
+\begin{itemize}
+    \item Mengenvergleich, 2. Bilder als Auswahlmöglichkeit wobei jenes Bild ausgewählt werden muss das mehr Elemente hat. (z.B.: Kreise)
+    \item Zahlenvergleich, Größere Zahl von Zwei Zahlen (0-100) auswählen.
+    \item Gesprochene Zahl erkennen (0-100) von fünf dargestellten Zahlen. Ausgabe über Kopfhörer bzw.Lautsprecher.
+
+\end{itemize}
+
+Kompetenz fortgeschrittene Vorläuferfähigkeit (17 Aufgaben):
+\begin{itemize}
+    \item Nachfolger 1er, bei dem zwei Einerschritten aufsteigende / absteigende Zahlen bis 20 dargeboten werden und derjenige Distraktor ausgewählt werden soll der die Reihe (um 1 mehr / weniger) ergänzt.
+
+
+    \item Nachfolger 2er, bei dem in 2er Schritten dargestellte Reihen verwendet werden
+    \item Zahlenstrahl, bei dem eine Zahl (1-20) ausgegeben wird (Kopfhörer), dann soll der Zahlenstrahl mit der ausgewählten Zahl gefunden werden.
+\end{itemize}
+  Curriculare Kompetenzen (15 Aufgaben Zahlenraum bis 20):
+\begin{itemize}
+    \item Additionsaufgaben
+    \item Subtraktion
+  \item Gleichungen, bei dem eine aus Zahlen dargebotene Gleichung die Korrekte Entsprechung mit Würfeln ausgewählt werden soll.
+\end{itemize}
+
+\subsection{	Mathematik für 2. Klasse}
+Kompetenzbereich Vorläuferkompetenzen (24 Aufgaben)
+\begin{itemize}
+    \item Zahl erkennen (0-1000)
+    \item Zahlvergleich zweier Geldbeträge (-100€) <>= 
+    \item Zahlenstrahl (-100)
+    \item Formen mit richtiger Spiegelachse erkennen.
+\end{itemize}
+
+Curriculare Kompetenzen (28 Aufgaben Zahlenraum bis 100)
+\begin{itemize}
+
+    \item Addition
+    \item Subtraktion
+    \item Multiplikation
+    \item Verdoppeln
+    \item Halbieren (Vorgegebene Zahl korrekte Halbierte/Verdoppelte Zahl auswählen lassen)
+    \item Auf 100 ergänzen (Bsp.: 68+x=100 | x= 32)
+\end{itemize}
+
+\subsection{Mathematik 3. Klasse}
+
+Kompetenz Rechnen (20 Aufgaben): 
+
+\begin{itemize}
+    \item Addition
+    \item Subtraktion
+    \item Multiplikation
+    \item Division
+    \item Erweiterte Zahlenstrahlaufgaben (Zuerst Skala erkannt werden soll und dann die Lösung angegeben werden soll)
+\end{itemize}
+Kompetenz Geometrie (9 Aufgaben):
+\begin{itemize}
+    \item Formlegeaufgaben (Kleine Teilstücke gegeben, richtige Figur wird ausgewählt die aus den Teilstücken zusammengesetzt werden könnte.)
+
+    \item Symmetrieaufgabe, verschiedene Landesflaggen gegeben. Es sollte die Flagge ausgewählt werden, die eine Spiegelachse enthält. (Keine Achsen werden eingezeichnet)
+
+    \item Rotationsaufgaben, bei denen diejenige Figur ausgewählt werden soll, die im Vergleich zu einer Referenzfigur gespiegelt wurde (anstatt rotiert).
+
+\end{itemize}
+Kompetenz Einheiten (8 Aufgaben):
+
+\begin{itemize}
+    \item Umrechenaufgaben: g – kg, cm – m.  
+
+
+    \item Einheitenwahl, z.B.: 70g oder 70kg für einen ausgewachsenen Menschen
+
+\end{itemize}
 
 \pagebreak
 \section{Opportunities and Risks}
@@ -152,8 +250,18 @@ The following risk have to be taken into account.
 \item There is no information about the legacy systems and their data structure.
 \item Further there is no information, whether the staff is capable and willing to supply the students master data (names, classes, ...).
 \end{itemize}
-
 \end{example}
+Möglichkeiten:
+\begin{itemize}
+    \item Wir können der PH helfen ihre Tests zu optimieren und neue Test einzuführen
+    \item Die Tests können spannender für die zu prüfenden Kinder gemacht werden
+    Risiken:
+    \item Die Datenbank könnte Probleme bereiten und die Prüfungen können verloren gehen, was den Prüfern an der PH zusätzliche Arbeit erbringen könnte
+    \item Die Tests könnten während der Prüfung Bugs aufweisen und die Prüfung unbrauchbar machen
+    \item Wenn die Zugänge nicht richtig verteilt werden könnten Kinder falsche Ergebnisse bekommen und nicht nach ihrem tatsächlichem Fortschritt gefördert werden
+\end{itemize}
+
+
 
 \pagebreak
 \section{Planning}
@@ -167,17 +275,22 @@ The following parts must be included:
 \item Assign project lead and other outstanding roles to team members.
 \item Give a rough estimate how many resources you need (human resources, licenses, servers, etc.)
 \end{itemize}
-
+\end{explanation}
 Answer the following questions when preparing this section:
 \begin{itemize}
-\item When will the project end?
-\item When will the project start?
-\item When will be a first prototype available?
-\item When does implementation work start?
-\item What are the big blocks of work to be done?
-\item Is this work doable in the given period of time?
-\item Do we need any other stuff to make our work (licenses, servers, É)?
+\item Einarbeiten in die Entwicklungsumgebung und in den Deployment-Workflow
+\item Review der derzeit in Arbeit befindlichen Designenhancements
+\item Umsetzen von Änderungswünsche (in Absprache mit ph und dem "alten“ Schnapp-Team)
+\item Eigene Verbesserungen vornehmen
 \end{itemize}
-\end{explanation}
+Team Rollen:
+\begin{itemize}
+\item Leader: Patrick Litzlfellner
+\end{itemize}
+Ressourcen:
+\begin{itemize}
+\item Personen: 4 	
+\end{itemize}
+
 
 \end{document}  
