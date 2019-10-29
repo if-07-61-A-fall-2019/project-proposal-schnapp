@@ -1,0 +1,224 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epstopdf}
+\usepackage[utf8]{inputenc}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+
+%Schnapp_Doku usePackages
+%\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tikz}					
+\usepackage{changepage}
+\usepackage{float}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}
+
+\newenvironment{explanation}{%
+   \setlength{\parindent}{0pt}
+   \itshape
+   \color{blue}
+}{}
+
+\newcommand{\projectname}{Schnapp++}
+\newcommand{\productname}{Schnapp++}
+\newcommand{\projectleader}{P. Litzlfellner}
+\newcommand{\documentstatus}{In process}
+%\newcommand{\documentstatus}{Submitted}
+%\newcommand{\documentstatus}{Released}
+\newcommand{\version}{V. 3.0}
+
+\begin{document}
+\begin{titlepage}
+\begin{flushright}
+\includegraphics[scale=.5]{./media/htlleondinglogo.png}\\
+\end{flushright}
+
+\vspace{10em}
+
+\begin{center}
+{\Huge Project Proposal} \\[3em]
+{\LARGE \productname} \\[3em]
+\end{center}
+
+\begin{flushleft}
+\begin{tabular}{|l|l|}
+\hline
+Project Name & \projectname \\ \hline
+Project Leader & \projectleader \\ \hline
+Document state & \documentstatus \\ \hline
+Version & \version \\ \hline
+\end{tabular}
+\end{flushleft}
+
+\end{titlepage}
+\section*{Revisions}
+\begin{tabular}{|l|l|l|}
+\hline
+\cellcolor[gray]{0.5}\textcolor{white}{Datum} & \cellcolor[gray]{0.5}\textcolor{white}{Author} & \cellcolor[gray]{0.5}\textcolor{white}{Änderungen} \\ \hline
+September 27, 2019&Patrick Litzlfellner &First version \\ \hline
+\cellcolor[gray]{0.5}\textcolor{white}{Datum} & \cellcolor[gray]{0.5}\textcolor{white}{Author} & \cellcolor[gray]{0.5}\textcolor{white}{Änderungen} \\ \hline
+Oktober 16, 2019&Nico Diaz &Second version \\ \hline
+\cellcolor[gray]{0.5}\textcolor{white}{Datum} & \cellcolor[gray]{0.5}\textcolor{white}{Author} & \cellcolor[gray]{0.5}\textcolor{white}{Änderungen} \\ \hline
+Oktober 26, 2019&Nico Diaz u. Patrick Litzlfellner &Überarbeitung des Projektauftrages \\ \hline
+\cellcolor[gray]{0.5}\textcolor{white}{Datum} & \cellcolor[gray]{0.5}\textcolor{white}{Author} & \cellcolor[gray]{0.5}\textcolor{white}{Änderungen} \\ \hline
+Oktober 28, 2019&Patrick Litzlfellner & Überarbeitung der Risiken \\ \hline
+\end{tabular}
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\section{Einführung}
+
+\subsection{Projektauftraggeber}
+Das Projekt Schnapp++ wird von der Pädagogische Hochschule OÖ(PHOÖ) und dem Konventhospital Barmherzigen Brüdern in Linz für die 4.Klasse des Jahrgangs 19/20 als Projektarbeit umgesetzt. 
+\newline
+\subsection{Was ist zu tun?}
+Dabei soll eine Testumgebung geschaffen werden, die der PHOÖ hilft Kindern in Volksschulen zu testen. Dabei werden sämtliche Daten in Datenbanken gespeichert und der PHOÖ überliefert, um dann ausgewertet zu werden.
+\newline
+\subsection{Unterscheidung}
+Es wird berücksichtigt, dass die Projekte Schnapp 4 und Schnapp ++ unabhängig voneinander sind.  Sie besitzen unterschiedliche Anforderungen und haben unterschiedliche Ziele. Dennoch ist Schnapp 5 eine weiterführung, des vollendeten Diplom Projekts Schnapp 4.
+\newline
+\subsection{Das Team}
+Das Projekt wird von den Schülern, der HTL-Leonding, in der 4AHIF umgesetzt. Dabei wird Patrick Litzlfellner als Projektleiter die Leitung des Projekts übernehmen. Des Weiteren wird Marco Supper, unser IT-Spezialist, im Thema Server arbeiten. Wobei Amel Dzogovic als Unterstützung fungiert. Nico Diaz wird somit als Co-Projektleiter und Organisator bei der Leitung des Projekts mitwirken.
+
+\pagebreak
+
+\section{Ausgangssituation}
+
+\subsection{Schnapp4}
+Schnapp4 ist ein Diplom Projekt der HTL-Leonding, welches Kinder mithilfe einer Geschichte Aufgaben erledigen lässt. Die Kinder können die Aufgaben in ihrem eigenen Tempo durchgehen und einige Aufgaben können nur mit dem Untersucher erledigt werden.
+
+\subsection{Schnapp5}
+Die PH Oberösterreich betreibt ein Projekt, welches LehrerInnen helfen soll, die Fähigkeiten der Schulanfänger besser einzuschätzen.
+Durch jährliche Testungen mit Schnapp5, wird die Übersicht an Kindern mit Förderbedarf erleichtert.
+LehrerInnen können mithilfe dieses Tools vorgefertigte Aufgaben, an die SchülerInnen, ausgeben. Die am Anfang der ersten Klasse stattfinden. 
+Die Daten der Testungen werden in einer CSV-Datei gespeichert und der PHOÖ übergeben. 
+\newline
+Die Volksschüler gehen in ihrem eigenen Tempo durch die Aufgaben. 
+Es gibt auch Übungen, die mit dem Untersucher erledigt werden müssen. 
+Dabei wird versucht das User Interface so einfach wie möglich zu gestalten.
+Die Tests können mehrmals wiederholt werden und die Schüler bekommen die Zeit, die sie brauchen, um die Tests abzuschließen. 
+Alle abgeschlossenen Tests werden auf den Server hochgeladen.
+\newline
+Aktuell haben wir für Schnapp 5 elf Aufgaben mit passenden Audios und Bildern zu jeder Übung.
+\newline
+
+
+\subsection{Schnapp++}
+\begin{enumerate}
+\item Die Testung wird auf 400 Volksschüler angewendet verteilt auf Volksschulen in Oberösterreich.
+\item Festlegung einer ID für jeden Schüler
+\item Die Testung ist in 4 Aufgaben aufgeteilt:
+\begin{itemize}
+\item Buchstaben/Wörter Lesen
+\item Sätze vervollständigen
+\item Diktat schreiben
+\item Wortschatztest
+\end{itemize}
+Jede Testung besitzt 30 Testitems.
+\end{enumerate}
+
+
+
+\pagebreak
+
+\section{Allgemeine Bedingungen und Einschränkungen}
+
+
+\subsection{Welche Einschränkungen gibt es?}
+
+Bezüglich der Einschränkungen muss das Projekt zu einem fixen Zeitpunkt vollendet werden. Jedoch stellt die PHOÖ strikte und genaue Angaben bei der Testumgebung. Bei der Testung spielen erleichterte Anmeldung für Volksschulkinder und leichte Bedienbarkeit des User Interfaces eine große Rolle und somit eine eingeschränkte Möglichkeit der Darstellung von Tests. Es sollte keine ablenkenden Elemente geben, da sonst die kurze Aufmerksamkeitsspanne, der zu testenden Kindern, beeinträchtigt und somit die Testergebnisse beeinflusst.
+Dadurch, dass mit vertraulichen Daten gearbeitet wird, muss die DSGVO berücksichtigt werden.
+
+
+\subsection{Welche bedingungen stellt uns die PHOÖ für das Projekt?}
+
+Durch den Laien wird darauf hingearbeitet die grafische Oberfläche benutzerfreundlich zu gestalten. Es muss für die Mitarbeiter der PHOÖ eine erleichterte Testverwaltung bereitgestellt werden, sodass die Tests auch während der Testung bearbeitet werden können. Durch unzählige Testungen, muss die Verwaltung der Daten über den Server der HTL-Leonding abgewickelt werden. Durch die leicht ablenkbaren Kinder sollten ablenkende Elemente vermieden werden. Weitere Bedingungen werden erst mit der Zeit von der PHOÖ mitgeteilt.
+
+
+\pagebreak
+
+\section{Projektziele und Systenkonzepte}
+
+\subsection{Was ist das Ziel des Projektes?}
+
+Ziel des Projektes ist die Testung der 1.Klässler zu Jahresende. Dabei entstehen enorm viele Wartungsarbeiten der Daten. Zudem wird auch die Wartung von Schnapp 5 auf die Kosten des Teams verlaufen. Da manche Aufgaben auf Zetteln gemacht werden, müssen sie eingescannt und richtig zugeordnet werden. Die PHOÖ verlangt die Möglichkeit der dynamischen Veränderungen der Testungen zur Laufzeit, bzw. Erweiterungen. 
+
+\subsection{Server und Client Architektur}
+
+Das gesamte System bezieht sich auf Server Client kommunikation.
+\newline
+
+\begin{itemize}
+\item Client
+    \begin{itemize}
+	    \item Dabei wird noch entschieden ob die Testungen über Tablets(Android OS) und oder Ipads(IOS) ausgeführt werden. Eine weitere Möglichkeit wäre eine Web API.
+    \end{itemize}
+
+\item Server
+    \begin{itemize}
+	   \item Der Server wird von der Schule zur verfügung gestellt.
+	\end{itemize}
+\end{itemize}
+
+\pagebreak
+\section{Möglichkeiten und Risiken}
+
+\subsection{Welchen nutzen zieht das Team und die Schule aus dem Projekt}
+
+Dieses Systemplanugsprojekt bietet dem Team die Möglichkeit ein Projekt zu entwickeln, mit einem fordernden Projektauftraggeber, der das Resultat weiterverwenden wird, zu erarbeiten.
+Somit wird die HTL-Leonding als attraktiver und verlässlicher Projektpartner hervorgehoben.
+Des Weiteren ermöglicht es dem Team das Projekt, nach vollendung, als Diplomarbeit weiterzuführen.
+
+
+\subsection{Risiken}
+\begin{itemize}
+ \item Testungsabbruch aufgrund langsamer Prozessoren
+ \item Testverlust aufgrund langsamer Prozessoren
+\end{itemize}
+
+
+
+\pagebreak
+\section{Planung}
+\subsection{Meilensteine}
+
+\begin{tabular}{llll}
+  Datum   & Aufgabe 											& Abgeschlossen am	\\
+  14.10.19 & Einarbeiten in den Deployment-Workflow		& 14.10.19				\\
+  16.10.19 & Einarbeiten in die Entwicklungsumgebung	& 16.10.19 				\\
+  21.10.19 & Erste Demo 										& 21.10.19				\\
+  25.10.19 & Project Proposal Abgabe							& 29.10.19				\\
+  10.01.20 & Erste Aufgabe implementiert					&							\\
+  10.02.20 & Zweite Aufgabe implementiert					&							\\
+  10.03.20 & Dritte Aufgabe implementiert					&							\\
+  10.04.20 & Vierte Aufgabe implementiert					&							\\
+  05.06.20 & Projketabgabe										&
+\end{tabular}
+
+\subsection{Team Rollen}
+\begin{itemize}
+\item Projektleiter: Patrick Litzlfellner
+\item Co-Projektleiter \& Organisator: Nico Diaz
+\item IT-Spezialist: Marco Supper
+\item Unterstützer: Amel Dzogovic
+\end{itemize}
+\subsection{Ressourcen}
+\begin{itemize}
+\item Personen: 4
+\item Laptops: 4
+\item 1 Server der HTL-Leonding
+\end{itemize}
+
+
+\end{document}  
