@@ -1,0 +1,216 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epstopdf}
+\usepackage[utf8]{inputenc}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+
+%Schnapp_Doku usePackages
+%\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tikz}					
+\usepackage{changepage}
+\usepackage{float}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}
+
+\newenvironment{explanation}{%
+   \setlength{\parindent}{0pt}
+   \itshape
+   \color{blue}
+}{}
+
+\newcommand{\projectname}{Schnapp++}
+\newcommand{\productname}{Schnapp++}
+\newcommand{\projectleader}{P. Litzlfellner}
+\newcommand{\documentstatus}{In process}
+%\newcommand{\documentstatus}{Submitted}
+%\newcommand{\documentstatus}{Released}
+\newcommand{\version}{V. 3.0}
+
+\begin{document}
+\begin{titlepage}
+\begin{flushright}
+\includegraphics[scale=.5]{./htlleondinglogo.png}\\
+\end{flushright}
+
+\vspace{10em}
+
+\begin{center}
+{\Huge Project Proposal} \\[3em]
+{\LARGE \productname} \\[3em]
+\end{center}
+
+\begin{flushleft}
+\begin{tabular}{|l|l|}
+\hline
+Project Name & \projectname \\ \hline
+Project Leader & \projectleader \\ \hline
+Document state & \documentstatus \\ \hline
+Version & \version \\ \hline
+\end{tabular}
+\end{flushleft}
+
+\end{titlepage}
+\section*{Revisions}
+\begin{tabular}{|l|l|l|}
+\hline
+\cellcolor[gray]{0.5}\textcolor{white}{Datum} & \cellcolor[gray]{0.5}\textcolor{white}{Author} & \cellcolor[gray]{0.5}\textcolor{white}{Änderungen} \\ \hline
+September 27, 2019&Patrick Litzlfellner &First version \\ \hline
+\cellcolor[gray]{0.5}\textcolor{white}{Datum} & \cellcolor[gray]{0.5}\textcolor{white}{Author} & \cellcolor[gray]{0.5}\textcolor{white}{Änderungen} \\ \hline
+Oktober 16, 2019&Nico Diaz &Second version \\ \hline
+\cellcolor[gray]{0.5}\textcolor{white}{Datum} & \cellcolor[gray]{0.5}\textcolor{white}{Author} & \cellcolor[gray]{0.5}\textcolor{white}{Änderungen} \\ \hline
+Oktober 26, 2019&Nico Diaz u. Patrick Litzlfellner &Überarbeitung des Projektauftrages \\ \hline
+\cellcolor[gray]{0.5}\textcolor{white}{Datum} & \cellcolor[gray]{0.5}\textcolor{white}{Author} & \cellcolor[gray]{0.5}\textcolor{white}{Änderungen} \\ \hline
+Oktober 28, 2019&Patrick Litzlfellner & Überarbeitung der Risiken \\ \hline
+\cellcolor[gray]{0.5}\textcolor{white}{Datum} & \cellcolor[gray]{0.5}\textcolor{white}{Author} & \cellcolor[gray]{0.5}\textcolor{white}{Änderungen} \\ \hline 
+Jänner 31, 2020&Marco Supper & Überarbeitung des Projekt Auftrages \\ \hline
+\end{tabular}
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\section{Einführung}
+
+\subsection{Projektauftraggeber}
+Das Projekt Schnapp++ wird von der Pädagogische Hochschule OÖ(PHOÖ) und dem Konventhospital Barmherzigen Brüdern in Linz für die 4.Klasse des Jahrgangs 19/20 als Projektarbeit umgesetzt. 
+\newline
+\subsection{Was ist zu tun?}
+Im Auftrag der Pädagogischen Hochschule OÖ (Kontakt: Martin Schöfl) soll Schnapp-Lernverlauf, eine App welche die Sprachkompetenz von Schülern, von der 1 Klasse Halbjahr bis zum Ende der 4. Klasse Volksschule, mit hilfe von 3 Testungen pro Schuljahr, verfolgt, entwickelt werden.
+
+Derzeit gibt es bereits Schnapp-Start, ein Programm welches den schulischen Förderbedarf von Kindern im letzten Jahr des Kindergartens und in der Vorschul- bzw. ersten Klasse Volksschule feststellen soll. Dieses Projekt soll ebenfalls inerhalb dieses Projektes weitergeführt und Verbesserungswünsche eingebaut werden.
+\newline
+\subsection{Unterscheidung}
+Es wird berücksichtigt, dass die Projekte Schnapp-Srart und Schnapp-Lernverlauf unabhängig voneinander sind.  Sie besitzen unterschiedliche Anforderungen und haben unterschiedliche Ziele.
+\newline
+\subsection{Das Team}
+Das Projekt wird von den Schülern, der HTL-Leonding, in der 4AHIF umgesetzt. Dabei wird Patrick Litzlfellner als Projektleiter die Leitung des Projekts übernehmen. Des Weiteren wird Marco Supper, unser IT-Spezialist, im Thema Server arbeiten. Wobei Amel Dzogovic als Unterstützung fungiert. Nico Diaz wird somit als Co-Projektleiter und Organisator bei der Leitung des Projekts mitwirken.
+
+\pagebreak
+
+\section{Ausgangssituation}
+
+\subsection{Schnapp-Start}
+Im Auftrag der PH OÖ wurde das Projekt Schnapp-Start ins Leben gerufen und von der Schule HTL-Leonding als Diplomarbeit der 5 AHIF 19/20 umgesetzt. Schnapp-Start testet Kinder, im letzten Kindergartenjahr und am Anfang der ersten Klasse Volksschule. Somit wird der Förderbedarf eines einzelnes Kindes festgestellt und kann somit leichter unterstützt werden.
+
+\subsection{Schnapp-Lernverlauf}
+Um die Testung der Kinder ab Mitte der ersten Klasse sicherzustellen benötigt es ein neues Projekt Schnapp Lernverlauf.
+Schnapp Lernverlauf testet die Kinder am  Anfang, Mitte und Ende der 2-4 Klasse. In der ersten Klasse wird aufgrund von Schnapp Start nur in der Mitte und am Ende des Jahres getestet.
+Durch Schnapp Lernverlauf wird der Fortschritt der Kinder festgehalten und man erkennt sofort welche Kinder unterstützung brauchen.
+\subsection{Schnapp-Web}
+Schnapp-Web ist eine Website in welcher Schnapp-Start verwaltet wird. Derzeit ist es möglich sich als Untersucher dort anzumelden und die Test Ergebnisse herunter zu laden.
+\newline
+
+\pagebreak
+
+\section{Allgemeine Bedingungen und Einschränkungen}
+
+
+\subsection{Welche Einschränkungen gibt es?}
+
+Bezüglich der Einschränkungen muss das Projekt zu einem fixen Zeitpunkt vollendet werden. Jedoch stellt die PHOÖ strikte und genaue Angaben bei der Testumgebung. Bei der Testung spielen erleichterte Anmeldung für Volksschulkinder und leichte Bedienbarkeit des User Interfaces eine große Rolle und somit eine eingeschränkte Möglichkeit der Darstellung von Tests. Es sollte keine ablenkenden Elemente geben, da sonst die kurze Aufmerksamkeitsspanne, der zu testenden Kindern, beeinträchtigt und somit die Testergebnisse beeinflusst werden.
+Dadurch, dass mit vertraulichen Daten gearbeitet wird, muss die DSGVO berücksichtigt werden.
+
+
+\subsection{Welche bedingungen stellt uns die PHOÖ für das Projekt?}
+
+Durch den Laien wird darauf hingearbeitet die grafische Oberfläche benutzerfreundlich zu gestalten. Es muss für die Mitarbeiter der PHOÖ eine erleichterte Testverwaltung bereitgestellt werden, sodass die Tests auch während der Testung bearbeitet werden können. Durch unzählige Testungen, muss die Verwaltung der Daten über den Server der HTL-Leonding abgewickelt werden. Durch die leicht ablenkbaren Kinder sollten ablenkende Elemente vermieden werden. Weitere Bedingungen werden erst mit der Zeit von der PHOÖ mitgeteilt.
+
+
+\pagebreak
+
+\section{Projektziele und Systenkonzepte}
+
+\subsection{Was ist das Ziel des Projektes?}
+
+Ziel des Projektes ist die Testung der 1.Klässler zu Jahresende. Dabei entstehen enorm viele Wartungsarbeiten der Daten. Zudem wird sich auch die Wartung von Schnapp-Start auf die Kosten des Teams verlaufen. Da eine Aufgabe aus Schnapp-Lernverlauf auf Zetteln gemacht wird, müssen diese eingescannt und richtig zugeordnet werden. Die PHOÖ verlangt die Möglichkeit der dynamischen Veränderungen der Testungen zur Laufzeit.Ebenfalls sollen die Aufgaben von Schnapp-Lernverlauf über Schnapp-Web verwalted werden.
+
+\subsection{Server und Client Architektur}
+
+Das gesamte System bezieht sich auf Server Client kommunikation.
+\newline
+
+\begin{itemize}
+\item Client Schnapp-Start
+    \begin{itemize}
+        \item Ionic/Angular Programm.
+	    \item Dabei wird noch entschieden ob die Testungen über Tablets(Android OS) und oder Ipads(IOS) ausgeführt werden.
+    \end{itemize}
+\item Client Schnapp-Lernverlauf
+    \begin{itemize}
+    	\item Ionic/Angular Programm.
+	    \item Dabei wird noch entschieden ob die Testungen über Tablets(Android OS) und oder Ipads(IOS) ausgeführt werden.
+    \end{itemize}
+\item Client Schnapp-Web
+    \begin{itemize}
+	    \item Angular Programm
+	    \item Wird auf dem Schulserver der HTBLA Leonding gehosted
+    \end{itemize}
+\item Server
+    \begin{itemize}
+	   \item Der Server wird von der HTBLA Leonding zur verfügung gestellt.
+	\end{itemize}
+\end{itemize}
+
+\pagebreak
+\section{Möglichkeiten und Risiken}
+
+\subsection{Welchen nutzen zieht das Team und die Schule aus dem Projekt}
+
+Dieses Systemplanugsprojekt bietet dem Team die Möglichkeit ein Projekt zu entwickeln, mit einem fordernden Projektauftraggeber, der das Resultat weiterverwenden wird, zu erarbeiten.
+Somit wird die HTL-Leonding als attraktiver und verlässlicher Projektpartner hervorgehoben.
+Des Weiteren ermöglicht es dem Team das Projekt, nach vollendung, als Diplomarbeit weiterzuführen.
+
+\subsection{Möglichkeiten}
+\begin{itemize}
+ \item Verlust/Korruption von Daten wird vermindert da die Daten nichtmehr händisch übertragen werden müssen
+ \item Weniger Stress für den Untersucher, da die Kinder mithilfe des Tablets die Aufgaben erledigen können
+ \item Der Verlauf des Kindes kann über die gesamte Volksschule überwacht werden
+\end{itemize}
+
+\subsection{Risiken}
+\begin{itemize}
+ \item Testungsabbruch aufgrund langsamer Prozessoren
+ \item Testverlust aufgrund langsamer Prozessoren
+\end{itemize}
+
+
+
+\pagebreak
+\section{Planung}
+\subsection{Meilensteine}
+
+\begin{tabular}{llll}
+  Datum   & Aufgabe 											& Abgeschlossen am	\\
+  14.10.19 & Einarbeiten in den Deployment-Workflow		& 14.10.19			
+  \\
+  25.10.19 & Project Proposal Abgabe							& 31.1.20				\\
+  25.10.19 &  Einarbeiten in den Deployment-Workflow					& 	13.1.20							\\
+  05.06.20 & Projketabgabe										& 05.06.20
+\end{tabular}
+
+\subsection{Team Rollen}
+\begin{itemize}
+\item Projektleiter: Patrick Litzlfellner
+\item Co-Projektleiter \& Organisator: Nico Diaz
+\item IT-Spezialist: Marco Supper
+\item Unterstützer: Amel Dzogovic
+\end{itemize}
+\subsection{Ressourcen}
+\begin{itemize}
+\item Personen: 4
+\item Laptops: 4
+\item 1 Server der HTL-Leonding
+\end{itemize}
+
+
+\end{document}  
